@@ -1,0 +1,28 @@
+{% extends 'master.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+    Edit Product
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>Edit Product</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+        <button type="submit" class="btn btn-info">
+            Update Product
+        </button>
+    </form>
+</div>
+{% endblock %}
+{# {{ form_as_p }}#}
+{# Book- Title, Year, isbn, genre, price, author, description #}
+
+{# pip freeze > requirements.txt #}
+{# .gitignore #}
+{# pip install -r requirements.txt #}
